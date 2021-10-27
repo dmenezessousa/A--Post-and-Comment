@@ -17,6 +17,8 @@ async function createPost(req,res){
     });
 
     let savedPost = await newPost.save();
+        
+    foundUser.postHistory.push(savedPost._id);
 
     res.json({message: "success", payload: savedPost});
     }catch(e){
