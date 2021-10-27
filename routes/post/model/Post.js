@@ -4,7 +4,7 @@ const postSchema = new mongoose.Schema(
     {
         title: {type: String},
         commentHistory: [{type: mongoose.Schema.ObjectId, ref: "comment"}],
-        owner: [{type: mongoose.Schema.ObjectId, ref: "user"}],
+        owner: {type: mongoose.Schema.ObjectId, ref: "user"},
     },
     {
         timestamps: true,
